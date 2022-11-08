@@ -10,6 +10,62 @@
         AllowsTransparency="True"
         Height="400" Width="300">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="110"/>
+        </Grid.RowDefinitions>
 
+        <Border Background="#1A1A1A"
+                    MouseDown="TopBorder_OnMouseDown">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="20"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="1"
+                        Foreground="White"
+                        Name="btnmin"
+                        Click="OnClick_Minimize"
+                        Content="⎯"
+                        Margin="0,-2,2,0"
+                        Style="{StaticResource ExitButtonTheme}"
+                        MouseEnter="OnEnter_ChangeGray"
+                        MouseLeave="OnLeave_Reset"/>
+
+                <Button Grid.Column="2"
+                        Foreground="White"
+                        Name="btnexit"
+                        Click="OnClick_Exit"
+                        Content="✕"
+                        Margin="0,-1,0,0"
+                        Style="{StaticResource ExitButtonTheme}"
+                        MouseEnter="OnEnter_ChangeRed"
+                        MouseLeave="OnLeave_Reset"/>
+
+            </Grid>
+        </Border>
+
+        <Image Grid.Row="1"
+               Grid.RowSpan="2"
+               Source="pack://application:,,,/Imagez/BlurredFull.jpg"
+               Width="850"
+               HorizontalAlignment="Center"/>
+
+        <Image Grid.Row="1"
+               Source="pack://application:,,,/Imagez/logo.png"
+               Margin="10,15,10,0"/>
+
+        <Button Grid.Row="2"
+                Style="{StaticResource StartButtonTheme}"
+                Background="#1A1A1A"
+                Margin="20,10,20,10"
+                Content="Install"
+                FontSize="20"
+                Click="OnClick_Install"
+                MouseEnter="OnEnter_ChangeGray"
+                MouseLeave="OnLeave_ChangeDarkGray"/>
     </Grid>
 </Window>

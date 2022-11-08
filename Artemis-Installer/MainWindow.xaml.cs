@@ -24,5 +24,49 @@ namespace Artemis_Installer
         {
             InitializeComponent();
         }
+
+        private void OnClick_Install(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OnClick_Minimize(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void OnClick_Exit(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void OnEnter_ChangeRed(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.Background = Brushes.Red;
+        }
+
+        private void OnEnter_ChangeGray(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.Background = new BrushConverter().ConvertFromString("#2A2A2A") as Brush;
+        }
+
+        private void OnLeave_Reset(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.Background = Brushes.Transparent;
+        }
+
+        private void OnLeave_ChangeDarkGray(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.Background = new BrushConverter().ConvertFromString("#1A1A1A") as Brush;
+        }
+
+        private void TopBorder_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

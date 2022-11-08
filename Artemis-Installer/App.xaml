@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Artemis_Installer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/FeaturesButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBlockListTheme.xaml"/>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/StartButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TopRightBarButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
