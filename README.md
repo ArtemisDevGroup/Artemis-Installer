@@ -1,3 +1,3 @@
 ![Artemis](https://github.com/ArtemisDevGroup/Artemis-Resources/blob/main/Text/ArtemisWithLogo.png)
 # Artemis-Installer
-The installer for Project Artemis.
+This reposititory contains the installer for Project [Artemis](https://github.com/ArtemisDevGroup). The installer is used to install the [Artemis Module](https://github.com/ArtemisDevGroup/Artemis) and the [Artemis Loader](https://github.com/ArtemisDevGroup/Artemis-Loader) as a seamless and professional procedure to your system. This app is written using [.NET](https://dotnet.microsoft.com/en-us/) utilizing their Windows-Specific [Windows Presentation Foundation](https://github.com/dotnet/wpf) UI framework in XAML and C#.
